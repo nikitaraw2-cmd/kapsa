@@ -1,33 +1,25 @@
-import { Sidebar } from "./components/Sidebar";
-import { Hero } from "./components/Hero";
-import { CatalogGrid } from "./components/CatalogGrid";
-import { Gallery } from "./components/Gallery";
-import { CustomOrder } from "./components/CustomOrder";
-import { About } from "./components/About";
-import { Footer } from "./components/Footer";
+import { NewNavbar } from "./components/new/NewNavbar";
+import { NewHero } from "./components/new/NewHero";
+import { Stats } from "./components/new/Stats";
+import { Process } from "./components/new/Process";
+import { NewCatalog } from "./components/new/NewCatalog";  // Используем новый каталог
+import { Portfolio } from "./components/new/Portfolio";
+import { Reviews } from "./components/new/Reviews";
+import { FAQ } from "./components/new/FAQ";
+import { NewFooter } from "./components/new/NewFooter";
 
 export default function App() {
-  const handleNavigate = (section: string) => {
-    const element = document.getElementById(section);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
-    <div className="min-h-screen">
-      {/* Fixed Sidebar */}
-      <Sidebar onNavigate={handleNavigate} />
-
-      {/* Main Scrolling Content */}
-      <main className="lg:ml-[30%] min-h-screen pt-16 lg:pt-0">
-        <Hero />
-        <CatalogGrid />
-        <Gallery />
-        <CustomOrder />
-        <About />
-        <Footer />
-      </main>
+    <div style={{ minHeight: '100vh', backgroundColor: '#E8DFD4' }}>
+      <NewNavbar />
+      <NewHero />
+      <Stats />
+      <NewCatalog />
+      <Process />
+      <Portfolio />
+      <Reviews />
+      <FAQ />
+      <NewFooter />
     </div>
   );
 }
