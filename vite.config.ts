@@ -4,6 +4,7 @@
   import path from 'path';
 
   export default defineConfig({
+    base: "/kapsa/",
     plugins: [react()],
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
